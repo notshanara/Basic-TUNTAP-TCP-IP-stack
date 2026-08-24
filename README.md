@@ -1,4 +1,21 @@
+ Key points Covered:
+  - Ethernet parsing, frame encapsulation and dispatching. (Data link - Layer2)
+  - ARP Request/Reply processing and resolution cache (Address resolution - Layer 3)
 
+NEEDED:
+Runs only on Linux based operating systems
+GCC compiler and MAKE
+Root Priviledge or CAP_NET_ADMIN capacity - needed to allocated TAP interface
+
+Building:-
+
+gcc-Iinclude src/*.c -o tcp_ip_stack
+
+
+Running:-
+
+sudo ./tcp_ip_stack
+    
 REPOSITORY STRUCTURE
 
 tcp_ip_stack/
@@ -17,8 +34,3 @@ tcp_ip_stack/
     ├── netdev.c      # Network device initialization & setup
     ├── tuntap_if.c   # TAP device allocation & read/write primitives
     └── utils.c       # Helper utilities
-
-
-
-
-    
